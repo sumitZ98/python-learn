@@ -1,4 +1,4 @@
-
+import sys
 
 
 def Add(a,b):
@@ -13,8 +13,14 @@ def Mul(a,b):
 def Div(a,b):
     return (a/b)
 
+# command line input/Arguments
+num1 = int(sys.argv[1])
+operation = sys.argv[2]
+num2 = int(sys.argv[3])
 
-a=2
-b=3
-c = Add(a,b)
-print (c)
+if operation == "Add":
+    output = Add(num1,num2)
+    print(output)
+
+
+# Enviournment Variables(ENV) is used when using sensitive info
