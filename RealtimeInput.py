@@ -9,7 +9,10 @@ for folder in folders:
     except FileNotFoundError:
         print("Please provide a valid folder name")
         continue
-        
+    except PermissionError:
+        break
+
+
     print("listing files for the folder" + folder)
 
     # print(files)
